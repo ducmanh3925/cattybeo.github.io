@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" type="x-icon" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchanger Online</title>
+    <link rel="icon" type="image" href="icon web3.png">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("contextmenu", (event) => {
+            event.preventDefault();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <img src="icon web3.png" style="float: left;margin-right: 10px;margin-top:-2px;" height="42px" width="42px"
+            id="header-logo">
+        <header>Currency Exchanger</header>
+        <form action="#">
+            <div class="amount">
+                <input type="number" value="" inputmode="numeric" required>
+                <div class="underline"></div>
+                <label>Enter Amount</label>
+            </div>
+            <div class="drop-list">
+                <div class="from">
+                    <p>From</p>
+                    <div class="select-box">
+                        <img src="https://flagsapi.com/US/flat/32.png" alt="flag">
+                        <select></select>
+                    </div>
+                </div>
+                <div class="icon"><img src="exchange.png" height="30px" width="30px" class="fas fa-exchange-alt"></div>
+                <div class="to">
+                    <p>To</p>
+                    <div class="select-box">
+                        <img src="https://flagsapi.com/VN/flat/32.png" alt="flag">
+                        <select></select>
+                    </div>
+                </div>
+            </div>
+            <div class="exchange-rate">
+                <span class="text" id="myText">N/A</span>
+            </div>
+            <button>
+                Convert
+            </button>
+        </form>
+    </div>
+
+    <script src="country-list.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

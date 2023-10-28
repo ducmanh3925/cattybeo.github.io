@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif";
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("./background1.png");
+}
+
+.wrapper {
+  background: var(--bg-light);
+  width: 450px;
+  height: 500px;
+  padding: 45px;
+  border-radius: 4px;
+  background: #ffffff;
+  box-shadow: 0px 8px 24px rgba(94, 99, 104, 0.2);
+}
+
+.wrapper header {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: "Segoe UI";
+  color: black;
+  display: flex;
+  justify-content: middle;
+}
+
+.wrapper form {
+  margin: 40px 0 20px 0;
+}
+
+form :where(input, select, button) {
+  width: 100%;
+  outline: none;
+  border: none;
+  margin-top: 25px;
+}
+
+form input {
+  border: none;
+  font-size: 25px;
+  border-bottom: 2px solid silver;
+  height: 44px;
+}
+
+form .drop-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drop-list .select-box {
+  display: flex;
+  height: 45px;
+  width: 115px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #999;
+  border-radius: 4px;
+}
+
+.select-box select {
+  width: auto;
+}
+
+.select-box select::-webkit-scrollbar {
+  width: 8px;
+}
+
+.select-box select::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.select-box select::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
+}
+
+.select-box img {
+  max-width: 21px;
+}
+
+.select-box select {
+  width: auto;
+  font-size: 17px;
+  background: none;
+  margin: 0 -5px 0 5px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.select-box:hover {
+  border: 2px solid #4158d0;
+}
+
+form label {
+  position: relative;
+  bottom: 28px;
+  left: 0;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+form input:focus~label,
+form input:valid~label {
+  bottom: 60px;
+  font-size: 12px;
+  color: #4158d0;
+}
+
+form .underline {
+  position: relative;
+  height: 2px;
+  width: 100%;
+  bottom: 1.8px;
+}
+
+form .underline:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #4158d0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+
+form input:focus~.underline:before,
+form input:valid~.underline:before {
+  transform: scaleX(1);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+form .exchange-rate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  margin: 20px 0 -6px;
+  background-color: #f3f3f3;
+  border-radius: 4px;
+  height: 120px;
+  text-align: center;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.exchange-rate .text {
+  transition: opacity 0.3s ease;
+}
+
+.drop-list .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 18px;
+  transition: 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.icon:active {
+  transform: scale(.9)
+}
+
+form button {
+  height: 52px;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  background: #4158d0;
+  transition: 0.2s ease;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background: #ffffff;
+  border: 2px solid #4158d0;
+  color: #4158d0;
+  transform: scale(1.03);
+}
+
+form button:active {
+  transform: scale(.9)
+}
